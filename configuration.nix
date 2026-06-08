@@ -1,7 +1,11 @@
-{ config, pkgs, lib, ... }:
-
+{ config, pkgs, ... }:
 {
-  networking.hostName = "nix-auto";
+  imports = [ ./hardware-configuration.nix ];
+
+  networking.hostName = "nix-pc02enterprise";
+
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   services.openssh = {
     enable = true;
@@ -20,6 +24,5 @@
   };
 
   security.sudo.enable = true;
-
-  system.stateVersion = "25.11";
+  system.stateVersion = "25.05";
 }
