@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 DISK="/dev/nvme0n1"
 umount /mnt 2>/dev/null
 wipefs -a $DISK
