@@ -7,7 +7,10 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  console.keyMap = "fr";
+
   services.xserver.enable = true;
+  services.xserver.xkb.layout = "fr";
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
@@ -27,6 +30,6 @@
     initialPassword = "admin";
   };
 
-  security.sudo.enable = true;`n  console.keyMap = "fr";`n  services.xserver.xkb.layout = "fr";
+  security.sudo.enable = true;
   system.stateVersion = "25.05";
 }
