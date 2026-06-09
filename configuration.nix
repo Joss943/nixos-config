@@ -27,6 +27,6 @@
     initialPassword = "admin";
   };
 
-  security.sudo.enable = true;
+  security.sudo.enable = true;`n  console.keyMap = "fr";`n  services.xserver.xkb.layout = "fr";
   system.stateVersion = "25.05";
 }
